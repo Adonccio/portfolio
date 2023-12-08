@@ -39,7 +39,6 @@ export default function Redes () {
                     <h2 className='wppText'>Fale diretamente comigo no Whatsapp</h2>
                     <img className='qr' src={qr} alt="" />
                 </div>
-                <img className='redesSociaisImg' src={redes} alt="" />
             </div>
         </div>
         </section>

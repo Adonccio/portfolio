@@ -3,7 +3,7 @@ import html from '../assets/techs/html.png'
 import react from '../assets/techs/react.png'
 import native from '../assets/techs/smartphone.png'
 import node from '../assets/techs/node.png'
-import postgre from '../assets/techs/postgre.png'
+import c from '../assets/techs/c.png'
 import ts from '../assets/techs/ts.png'
 import sass from '../assets/techs/sass.png'
 import git from '../assets/techs/git.png'
@@ -21,7 +21,7 @@ export default function Techs () {
                 <TechCard foto={react} nome='REACT'/>
                 <TechCard foto={native} nome='REACT NATIVE'/>
                 <TechCard foto={node} nome='NODE JS'/>
-                <TechCard foto={postgre} nome='POSTGRESQL'/>
+                <TechCard foto={c} nome='C#'/>
                 <TechCard foto={sass} nome='SASS'/>
                 <TechCard foto={bootstrap} nome='BOOTSTRAP'/>
                 <TechCard foto={git} nome='GIT'/>

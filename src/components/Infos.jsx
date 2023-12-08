@@ -55,13 +55,13 @@ export default function Infos () {
             Olá, me chamo
 
     </h1>
-        <h1 className='gustavo' style={style.words}>
+        <h1 className='gustavo'  style={style.words}>
  {
   'Gustavo Adoncio,'.split('').map((i) =>
    i == ' ' ?
-   <Letter space={true} letter={i}/>
+   <Letter space={true} key={Math.random()} letter={i}/>
    :
-   <Letter space={false} letter={i}/>
+   <Letter space={false} key={Math.random()} letter={i}/>
   )}
 </h1>
 <h1 id="hello2">
@@ -84,7 +84,8 @@ export default function Infos () {
     color="success"
     outline
   >
-    Venha me conhecer!
+    <a id='venha' href="#sobreMim">
+    Venha me conhecer!</a>
   </Button>
     </div>
     <div id='fotodiv'>

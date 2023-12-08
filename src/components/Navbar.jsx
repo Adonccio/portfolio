@@ -22,7 +22,7 @@ export default function NavbarTop (args) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-      <Navbar class='navbar' fixed='top' expand={'md'} container={'fluid'}{...args}>
+      <Navbar className='navbar' fixed='top' expand={true} container={'fluid'}{...args}>
         <div className='container navbar'>
             <NavbarBrand className='navbarItem' href="/"><img src={logo} alt="" className="logo" /></NavbarBrand>
             <NavbarToggler onClick={toggle} />

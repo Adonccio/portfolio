@@ -39,7 +39,7 @@ export default function About () {
 
     return (
         <>
-        <section className="sobreMim">
+        <section id='sobreMim' >
             
         <div className="container sobreMimdiv">
         <h1 className='TitleSobre'>UM POUCO SOBRE MIM</h1>

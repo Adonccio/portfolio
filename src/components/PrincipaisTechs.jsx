@@ -21,7 +21,8 @@ export default function PrincipaisTechs () {
         <img src={native} alt="" className='nativefoto'/>
     </div>
     <p className='txtTechs'>
-        Apesar da minha curiosidade para estudar diversas tecnologias, meus estudos principais são focados em React para desenvolvimento Web e React Native para desenvolvimento Mobile.
+        Apesar da minha curiosidade para estudar diversas tecnologias, meus estudos principais são focados em React para desenvolvimento Web e React Native para desenvolvimento Mobile, além de
+        me interessar bastante sobre a tecnologia C#.
         Veja abaixo todas tecnologias com que tenho familiaridade.
     </p>
     <div>
