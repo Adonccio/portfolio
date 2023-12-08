@@ -105,6 +105,11 @@ h1{
     }
 }
 
+#arrow {
+  width: 75px !important;
+  border-radius: 50% !important;
+}
+
 .botaoinicial:hover:enabled {
   background-color: #ccf381;
   color: #4831d4 !important;
@@ -114,6 +119,32 @@ h1{
   color: #4831d4;
 }
 
+#botaoVoltar{
+  outline: none;
+  background-color: #fff;
+  display: flex;
+  border: 0px;
+  padding: 0px !important;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  bottom: 30px;
+  z-index: 999;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s ease;
+}
+
+#botaoVoltar.active {
+  visibility: visible;
+  opacity: 1;
+}
 
 #foto {
   position: relative;

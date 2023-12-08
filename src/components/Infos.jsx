@@ -70,7 +70,7 @@ export default function Infos () {
 <div id="infos-home">
     <div id="textos">
         <p>
-            Sou estudante de programação e desenvolvimento web com ênfase em <span id='enfase'>React, React Native e NodeJS</span>. Passo meus dias e noites estudando novas tecnologias e oportunidades de progredir na minha carreira profissional.
+            Sou estudante de programação e desenvolvimento web com ênfase em <span id='enfase'>React, React Native e NodeJS</span>. Passo meus dias estudando novas tecnologias e oportunidades de progredir na minha carreira profissional.
         </p>
         <p>
             Gosto de estudar todas as partes de um desenvolvimento.

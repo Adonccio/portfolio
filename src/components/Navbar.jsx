@@ -53,7 +53,6 @@ export default function NavbarTop (args) {
                   </DropdownMenu>
                 </UncontrolledDropdown> */}
               </Nav>
-              <NavbarText className='navbarItem' ><p >Adoncio</p></NavbarText>
             </Collapse>
     </div>
       </Navbar>
