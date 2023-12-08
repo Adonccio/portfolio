@@ -623,6 +623,7 @@ a{
     position: relative;
     left: 10rem;
   }
+  
 
   .botaoProjeto{
     margin-top: 0px;
@@ -684,10 +685,6 @@ a{
 #infos{
   background-image: none;
   background-color: #4831d4 !important;}
-  body{
-  text-align: center;
-
-  }
 
 #textos {
   width: fit-content;
@@ -972,4 +969,47 @@ a{
 
     margin: 20px auto;
   }
+  .gustavo > h1 {
+    font-size: 25px !important;
+  }
+  #hello2, #hello {
+    font-size: 25px;
+  }
+  .navbarItem{
+    font-size: 13px;
+  }
+  .nav-item{
+    width: fit-content;
+  }
+}
+
+@media (max-width: 400px) {
+  .botaoProjeto{
+    width: fit-content;
+  }
+  .container1, .container2{
+    width: fit-content;
+  }
+  
+.cardProjeto2:hover {
+  scale: none;
+  left: 0px;
+  transition: none;
+  box-shadow: rgb(61, 61, 61) 0px 30px 50px -12px;
+} 
+.cardProjeto1:hover {
+  scale: none;
+  left: 0px;
+  transition: none;
+  box-shadow: rgb(61, 61, 61) 0px 30px 50px -12px;
+} 
+.tecnologias{
+  display: grid !important;
+  grid-template-columns: 1fr;
+  width: 100% !important;
+}
+
+.TitleTechs {
+  font-size: 40px;
+}
 }
