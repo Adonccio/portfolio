@@ -305,7 +305,7 @@ hr {
 }
 
 .sobreMimdiv {
-  padding-top: 50px;
+  padding-top: 100px !important;
   padding-bottom: 250px;
   display: grid;
 }
