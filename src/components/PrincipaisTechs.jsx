@@ -12,7 +12,7 @@ export default function PrincipaisTechs () {
   const [ estadoBotao, setestadoBotao ] = useState('Mostrar Todas Tecnologias')
 
     return (<>
-    <section  className='techsSection'>
+    <section  id='techsSection'>
         <div className="container">
     <h1 className='TitleTechs'>Tecnologias em Foco</h1>
     <div className="tecnologias">

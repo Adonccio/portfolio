@@ -284,13 +284,14 @@ p {
   height: 2100px;
 }
 
-.techsSection, .sectionProjetos {
+#techsSection, #sectionProjetos {
   background-color:#F9F9F9 ;
   color: #4831d4;
   text-align: center;
   margin: auto;
   width: 100%;
   height: 100%;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -751,7 +752,7 @@ a{
   .nav-item{
     width: 110px;
   }
-  .sectionProjetos{
+  #sectionProjetos{
     height: 3000px;
   }
 
@@ -954,7 +955,7 @@ a{
   #gradeTechs{
     grid-template-columns: 1fr 1fr;
   }
-  .sectionProjetos{
+  #sectionProjetos{
     height: 3200px;
   }
   .whatsappDiv{

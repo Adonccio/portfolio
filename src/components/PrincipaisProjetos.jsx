@@ -9,7 +9,7 @@ import CardProjeto2 from './CardProjeto2'
 export default function PrincipaisProjetos () {
     return (
         <> 
-        <section className="sectionProjetos">
+        <section id="sectionProjetos">
         <div className="container techs">
             
         <h1 className="TitleTechs">

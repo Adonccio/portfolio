@@ -28,17 +28,17 @@ export default function NavbarTop (args) {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="me-auto" navbar>
-                  <NavLink className='navbarItem' target='_blank' href="https://www.instagram.com/adonccio/">
-                  Instagram
+                  <NavLink className='navbarItem' href="#sobreMim">
+                  Sobre Mim
                   </NavLink>
                 <NavItem>
-                  <NavLink className='navbarItem' target='_blank'  href="https://www.linkedin.com/in/gustavo-adoncio-51a4a8276/">
-                    LinkedIn
+                  <NavLink className='navbarItem' href="#techsSection">
+                    Tecnologias
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className='navbarItem' target='_blank' href="https://github.com/Adonccio">
-                    GitHub
+                  <NavLink className='navbarItem' href="#sectionProjetos">
+                    Projetos
                   </NavLink>
                 </NavItem>
                 {/* <UncontrolledDropdown nav inNavbar>
