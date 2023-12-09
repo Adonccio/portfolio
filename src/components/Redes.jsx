@@ -14,17 +14,17 @@ export default function Redes () {
                     className='botaoredes'
                     color="success"
                     outline>
-                    <a className='linkRedes' color="success" target="_blank" href="">LinkedIn</a>
+                    <a className='linkRedes' color="success" target="_blank" href="https://www.linkedin.com/in/gustavo-adoncio-51a4a8276/">LinkedIn</a>
                       </Button><Button
                     className='botaoredes'
                     color="success"
                     outline>
-                    <a className='linkRedes' color="success" target="_blank" href="">Github</a>
+                    <a className='linkRedes' color="success" target="_blank" href="https://github.com/Adonccio">Github</a>
                       </Button><Button
                     className='botaoredes'
                     color="success"
                     outline>
-                    <a className='linkRedes' color="success" target="_blank" href="">Instagram</a>
+                    <a className='linkRedes' color="success" target="_blank" href="https://www.instagram.com/adonccio/">Instagram</a>
                       </Button><Button
                     className='botaoredes'
                     color="success"
