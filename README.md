@@ -8,7 +8,7 @@
 
 Responsive page to all devices. 💻📱
 
-![Demo](https://drive.google.com/file/d/1M-QE2dWB19FrS6ehJwVBH3j2B968ns5Z/view)
+![Demo](https://github.com/Adonccio/portfolio/issues/1#issue-2054933744)
 ## Stack ⚛️
 
 **Front-end:** React, Bootstrap
