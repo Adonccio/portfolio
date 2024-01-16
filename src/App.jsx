@@ -14,6 +14,7 @@ import PrincipaisTechs from './components/PrincipaisTechs';
 import PrincipaisProjetos from './components/PrincipaisProjetos';
 import Redes from './components/Redes';
 import arrow from '../src/assets/arrow.png'
+import PowerBI from './components/PowerBI';
 
 
 
@@ -71,6 +72,9 @@ function App() {
     <section>
         <PrincipaisTechs/>
     
+    </section>
+    <section>
+      <PowerBI/>
     </section>
     <section>
       <PrincipaisProjetos/>

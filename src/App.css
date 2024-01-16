@@ -466,6 +466,12 @@ a{
   width: 100%;
 }
 
+.carousel-item >img {
+  width: 1000px !important;
+}
+.carousel-caption {
+  color: #e8e6e6 !important;
+}
 
 .container1{
   float: left;
@@ -587,6 +593,11 @@ a{
   width: 1500px;
 }
 
+
+.carousel-item >img {
+  width: 800px !important;
+}
+
 #foto{
   left: 1rem;
 }
@@ -623,6 +634,7 @@ a{
   position: relative;
   left: 3rem;
 }
+
 
 .circleGreen {
   position: relative;
@@ -847,11 +859,16 @@ a{
     height: 25rem;
   }
 }
-@media (max-width: 770px){
+@media (max-width: 800px){
   .tecnologias{
     width: 22rem !important ;
     height: 15rem;
   }
+
+  
+.carousel-item >img {
+  width: 600px !important;
+}
   .reactfoto{
     width: 150px !important;
     height: 130px !important;
@@ -972,12 +989,23 @@ a{
     padding-bottom: 15px !important;
   }
 }
+@media (max-width: 600px){
+  
+.carousel-item >img {
+  width: 480px !important;
+}
+}
 
 @media (max-width: 500px) {
   
   .gustavo > h1 {
     font-size: 35px !important;
   }
+
+  
+.carousel-item >img {
+  width: 400px !important;
+}
   .navbarItem{
     margin-left: 0px !important;
     padding-left: 10px !important;
@@ -1027,6 +1055,12 @@ a{
   .container1, .container2{
     width: fit-content;
   }
+
+  
+.carousel-item >img {
+  width: 300px !important;
+}
+
   
 .cardProjeto2:hover {
   scale: none;
