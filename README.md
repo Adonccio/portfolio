@@ -1,8 +1,18 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# My Portfolio 
 
-Currently, two official plugins are available:
+- See a little bit of my projects. 👨‍💻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Layout
+
+Responsive page to all devices. 💻📱
+
+![Demo](https://private-user-images.githubusercontent.com/136405123/292648544-2988b45b-7935-4b9f-80e5-208d62dcc830.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDMzNzQ0MjIsIm5iZiI6MTcwMzM3NDEyMiwicGF0aCI6Ii8xMzY0MDUxMjMvMjkyNjQ4NTQ0LTI5ODhiNDViLTc5MzUtNGI5Zi04MGU1LTIwOGQ2MmRjYzgzMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMxMjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMTIyM1QyMzI4NDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lYjJhN2QyZjIxMDk3ZTAyZjdmYzEzZWYyOTNiNGNlNmU5Y2VlNzI1YzE0ZWJjMTdhMDRlOGM3ZjRkMTliOWQ5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9._DJubfCbnlXmKe7GKncU3Fldekjg5H3Q6JA_5jN4La4)
+## Stack ⚛️
+
+**Front-end:** React, Bootstrap
+
+## Deploy
+
+See the page online at (https://portfolio-mlowc289v-adonccio.vercel.app/)
