@@ -473,6 +473,17 @@ a{
   color: #e8e6e6 !important;
 }
 
+.carousel-control-prev-icon {
+  background-color: #4831D4;
+  border-radius:20px;
+  padding: 20px;
+}
+.carousel-control-next-icon{
+  background-color: #4831D4;
+  border-radius:20px;
+  padding: 20px;
+
+}
 .container1{
   float: left;
   width: 100%;
