@@ -87,7 +87,8 @@ class PowerBI extends Component {
 <h1 className='TitleTechs'>Habilidade com Data Science</h1>
 
 <p className='txtTechs'>
-    Além da programação, recentemente tenho me aventurado na área de Data Science, com foco em PowerBI Desktop, onde analiso dados e desenvolvo dashboards. Em seguida estão alguns de meus projetos pessoais.
+     Data Science é uma grande paixão, tenho conhecimentos em análise de dados, Machine Learning e Automação Robótica de Processos com Python e suas bibliotecas.
+     Além disso, tenho conhecimentos em Excel e PowerBI Desktop, onde analiso dados e desenvolvo dashboards. Em seguida estão alguns de meus projetos pessoais.
 </p>
 </div>
 <div id="carrossel">

@@ -1,4 +1,4 @@
-import eu from '../assets/Sem título.png'
+import eu from '../assets/foto perfil.png'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect } from 'react'
