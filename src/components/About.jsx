@@ -1,4 +1,4 @@
-import eu from '../assets/foto perfil.png'
+import eu from '../assets/foto perfil.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLayoutEffect } from 'react'
