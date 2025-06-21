@@ -1021,7 +1021,14 @@ a{
   background-color:  #4831d4 !important;
   background-image: none;
   padding-top: 80px;
-  height: 1150px !important;
+  height: 770px !important;
+}
+#hello2 {
+  margin-top: 0.1px;
+}
+
+.gustavo {
+  height: 60px;
 }
 
 }
