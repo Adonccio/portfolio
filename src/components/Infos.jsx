@@ -3,99 +3,74 @@ import '../App.css'
 import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { Button } from 'reactstrap'
-
+import { useTranslation, Trans } from 'react-i18next'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Infos () {
-    const style = {
-        wrapper: {
-         height: '30vh',
-         width: '90vw',
-         display: 'flex',
-         flexDirection: 'column',
-         justifyContent: 'center',
-         alignItems: 'center',
-         backgroundColor: 'black',
-        },
-        words:{
-         display: 'flex',
-         flexDirection: 'row',
-         overflow: 'hidden',
-         
-        },
-        letter:{
-            fontSize: 58,
-            color: 'rgb(204, 243, 129)',
-            letterSpacing: 6,
-            fontWeight: 'bold'
-           }
-       }
+  const { t, i18n } = useTranslation()
 
-       const Letter = ({space, letter}) => {
-        return(
-         space == true ?
-          <h1 className="text">&nbsp;</h1>
-          :
-          <h1 className="text" style={style.letter}>{letter}</h1>
-        )
-       }
-       
-       useEffect(() => {
-        let textAnimation = gsap.to('.text', {
-         y: 0,
-         stagger: 0.2,
-         delay: 0.5,
-         duration: .8,
-         x: 0,
-        });
-       }, []);
+  const style = {
+    words: {
+      display: 'flex',
+      flexDirection: 'row',
+      overflow: 'hidden',
+    }
+  }
 
-    return(
-    <><h1 id='hello'>
-            Olá, me chamo
+  const Letter = ({ space, letter }) => {
+    return (
+      <h1 className="text">
+        {space ? '\u00A0' : letter}
+      </h1>
+    )
+  }
 
-    </h1>
-        <h1 className='gustavo'  style={style.words}>
- {
-  'Gustavo Adoncio,'.split('').map((i) =>
-   i == ' ' ?
-   <Letter space={true} key={Math.random()} letter={i}/>
-   :
-   <Letter space={false} key={Math.random()} letter={i}/>
-  )}
-</h1>
-<h1 id="hello2">
-    Seja bem-vindo ao meu porfolio!
-</h1>
-<div id="infos-home">
-    <div id="textos">
-        <p>
-            Sou estudante de programação e ciência de dados com ênfase em <span id='enfase'>Python, React, React Native e NodeJS</span>. Passo meus dias estudando novas tecnologias e oportunidades de progredir na minha carreira profissional.
-        </p>
-        <p>
-            Gosto de estudar todas as partes de um desenvolvimento.
-        </p>
-        <p>
-            Estudar inglês é um dos meus hobbies!
-        </p>
-    
-        <Button
-    className='botaoinicial'
-    color="success"
-    outline
-  >
-    <a id='venha' href="#sobreMim">
-    Venha me conhecer!</a>
-  </Button>
-    </div>
-    <div id='fotodiv'>
-        <img id="foto" src={foto} alt="" />
-        <div className="circlePurple"></div>
-        <div className="circleGreen"></div>
-    </div>
+  useEffect(() => {
+    gsap.set('.text', {
+      y: 100,
+      autoAlpha: 0
+    })
 
-</div>
+    gsap.to('.text', {
+      y: 0,
+      autoAlpha: 1,
+      stagger: 0.05,
+      duration: 0.6,
+      ease: 'power2.out'
+    })
+  }, [i18n.language])
 
+  return (
+    <>
+      <h1 id='hello'>{t('infos.hello')}</h1>
 
-    </>)
+      <span className='gustavo' style={style.words}>
+        {
+          t('infos.name').split('').map((char, i) =>
+            <Letter key={i} space={char === ' '} letter={char} />
+          )
+        }
+      </span>
+
+      <h1 id="hello2">{t('infos.welcome')}</h1>
+
+      <div id="infos-home">
+        <div id="textos">
+          <p>
+            <Trans i18nKey="infos.description1" components={{ 1: <span id="enfase" /> }} />
+          </p>
+          <p>{t('infos.description2')}</p>
+          <p>{t('infos.description3')}</p>
+
+          <Button className='botaoinicial' color="success" outline  href="#sobreMim"> {t('infos.button')} </Button>
+        </div>
+
+        <div id='fotodiv'>
+          <img id="foto" src={foto} alt="" />
+          <div className="circlePurple"></div>
+          <div className="circleGreen"></div>
+        </div>
+      </div>
+    </>
+  )
 }

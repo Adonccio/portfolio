@@ -1,0 +1,67 @@
+{
+    "aboutTitle": "UM POUCO SOBRE MIM",
+    "left1": "Sou desenvolvedor <1>full stack</1>.",
+    "left2": "Tenho conhecimentos em engenharia de dados.",
+    "left3": "Estou disposto a ter diferentes experiências de trabalho em estágio.",
+    "right1": "Minha previsão de formação é Julho de 2026.",
+    "right2": "Tenho 24 anos.",
+    "right3": "Possuo <1>inglês avançado</1> e experiência com conversação.",
+    "project": {
+        "access": "Acessar",
+        "repository": "Repositório"
+      },
+    "infos": {
+    "hello": "Olá, me chamo",
+    "name": "Gustavo Adoncio",
+    "welcome": "Seja bem-vindo ao meu portfólio!",
+    "description1": "Sou desenvolvedor de software e engenheiro de dados com ênfase em <1>Vue, React, Java e Airflow</1>. Sou estagiário na Extreme Digital Solutions desde 2024",
+    "description2": "Participo de todas as etapas do desenvolvimento de aplicações, desde o levantamento de requisitos, ao desenvolvimento do banco de dados, front-end e back-end até documentos entregáveis.",
+    "description3": "Estudar inglês é um dos meus hobbies!",
+    "button": "Venha me conhecer!"
+    },
+    "techs": {
+        "title": "Tecnologias em Foco",
+        "description": "No meu dia a dia de trabalho, atuo em todas as etapas do desenvolvimento de aplicações — desde o levantamento de requisitos até a implantação. Tenho experiência na criação de bancos de dados estruturados com SQL, além da extração e modelagem de dados. No desenvolvimento, utilizo Vue.js no front-end e Java no back-end. Abaixo, você pode conferir algumas das tecnologias com as quais já trabalhei:",
+        "buttonShow": "Mostrar Todas Tecnologias",
+        "buttonHide": "Esconder Tecnologias"
+      },
+      "projects": {
+        "title": "Projetos Principais",
+        "apple": {
+          "name": "Apple Shop",
+          "description": "Loja virtual da Apple, com navegação em SPA feita com NextJS."
+        },
+        "amazon": {
+          "name": "Amazon Prime Video App",
+          "description": "Clone da interface do aplicativo do Amazon Prime Video."
+        },
+        "spa": {
+            "name": "Loja SPA",
+          "description": "Projeto de loja para prática de SPA com React."
+        },
+        "kritic": {
+            "name": "App de Sinopse de Filmes",
+          "description": "Aplicativo de busca de filmes utilizando React Native e API do TMDB."
+        },
+        "stock": {
+            "name": "Estoque com React",
+          "description": "Projeto de estoque de loja utilizando React."
+        }
+      },
+    "redes": {
+        "title": "Redes Sociais",
+        "linkedin": "LinkedIn",
+        "github": "Github",
+        "instagram": "Instagram",
+        "whatsapp": "WhatsApp",
+        "email": "gustavoadoncio@gmail.com",
+        "contact": "Fale diretamente comigo no Whatsapp"
+    },
+    "navbar": {
+        "about": "Sobre Mim",
+        "techs": "Tecnologias",
+        "projects": "Projetos",
+        "languageToggle": "EN"
+      }
+  }
+  

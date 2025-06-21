@@ -15,34 +15,13 @@ import PrincipaisProjetos from './components/PrincipaisProjetos';
 import Redes from './components/Redes';
 import arrow from '../src/assets/arrow.png'
 import PowerBI from './components/PowerBI';
+import './i18n'
 
 
 
 function App() {
 
 
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.to('.projetocard', {
-      x: 0,
-      opacity: 1,
-      duration: 1,
-      rotate: '0deg',
-      scrollTrigger: {
-        trigger: '.projetos',
-      // markers: true,
-      start: 'top 654px',
-      end: 'bottom 1080px',
-      // scrub: true,
-
-    }
-    })
-
-    return () => {
-      gsap.killTweensOf('.projetocard')
-    }
-  }, [])
 
 
   return (
@@ -73,9 +52,9 @@ function App() {
         <PrincipaisTechs/>
     
     </section>
-    <section>
+    {/* <section>
       <PowerBI/>
-    </section>
+    </section> */}
     <section>
       <PrincipaisProjetos/>
     </section>

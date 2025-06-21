@@ -1,0 +1,66 @@
+{
+    "aboutTitle": "A LITTLE ABOUT ME",
+    "left1": "I'm a <1>full stack</1> developer.",
+    "left2": "I have knowledge in data engineering.",
+    "left3": "I'm open to various internship experiences.",
+    "right1": "My expected graduation is July 2026.",
+    "right2": "I'm 24 years old.",
+    "right3": "I have <1>advanced english</1> and conversation experience.",
+    "project": {
+        "access": "Access",
+        "repository": "Repository"
+      },
+    "infos": {
+    "hello": "Hello, my name is",
+    "welcome": "Welcome to my portfolio!",
+    "description1": "I'm a software developer and data engineer focused on <1>Vue, React, Java and Airflow</1>. Intern at Extreme Digital Solutions since 2024.",
+    "description2": "I work in all stages of software development, from requirements gathering, database, front-end, back-end to deliverables documents.",
+    "description3": "One of my hobbies is studying English!",
+    "button": "Get to know me!"
+    },
+    "techs": {
+        "title": "Focused Technologies",
+        "description": "In my day-to-day work, i participate in all stages of application development — from gathering requirements to deployment. I have experience creating structured databases using SQL, as well as extracting and modeling data. In development, i use Vue.js on the front end and Java on the back end. Below, you can see some of the technologies i've worked with:",
+        "buttonShow": "Show All Technologies",
+        "buttonHide": "Hide Technologies"
+      },
+    "projects": {
+        "title": "Main Projects",
+        "apple": {
+            "name": "Apple Shop",
+            "description": "Virtual Apple store with SPA navigation built using NextJS."
+        },
+        "amazon": {
+            "name": "Amazon Prime Video App",
+            "description": "Clone of the Amazon Prime Video app interface."
+        },
+        "spa": {
+            "name": "SPA Store",
+            "description": "Store project for practicing SPA using React."
+        },
+        "kritic": {
+            "name": "Movie Synopsis App",
+            "description": "Movie search app using React Native and the TMDB API."
+        },
+        "stock": {
+            "name": "React Inventory",
+            "description": "Store inventory project built with React."
+        }
+    },
+    "redes": {
+        "title": "Social Media",
+        "linkedin": "LinkedIn",
+        "github": "Github",
+        "instagram": "Instagram",
+        "whatsapp": "WhatsApp",
+        "email": "gustavoadoncio@gmail.com",
+        "contact": "Contact me directly on WhatsApp"
+    },
+    "navbar": {
+        "about": "About Me",
+        "techs": "Technologies",
+        "projects": "Projects",
+        "languageToggle": "PT"
+      }
+  }
+  

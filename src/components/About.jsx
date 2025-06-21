@@ -1,79 +1,90 @@
-import eu from '../assets/foto perfil.jpg'
+import eu from '../assets/foto_perfil.jpg'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
+import { useTranslation, Trans } from 'react-i18next'
 
-export default function About () {
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
-        
-        gsap.set('.divfoto', {autoAlpha: 1})
-        gsap.fromTo('.divfoto',
-        {
-           opacity: 0,
-        //    xPercent: -50,
-        //    visibility: 'hidden',
-        //    overflow: 'hidden',
-           ease: "power4",
-        }, {
-            opacity: 1,
-           duration: 5,
-           delay: 0.3,
-        //    xPercent: -50,
-           visibility: 'visible',
-           overflow: 'visible',
-           ease: "power4",
-           scale: 1,
-           objectFit: 'cover',
 
-           scrollTrigger: {
-            trigger: '.sobreMim',
-        //   markers: true,
-          start: 'top 350px',
-          end: 'top 100px',
-    
+export default function About() {
+  const { t } = useTranslation()
+  const sectionRef = useRef(null)
+  const imgRef = useRef(null)
+  const fotoWrapperRef = useRef(null)
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    const ctx = gsap.context(() => {
+      gsap.from(sectionRef.current, {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse'
         }
-            })
-    }
-    , [])
+      })
 
-    return (
-        <>
-        <section id='sobreMim' >
-            
-        <div className="container sobreMimdiv">
-        <h1 className='TitleSobre'>UM POUCO SOBRE MIM</h1>
+      gsap.set(fotoWrapperRef.current, { visibility: 'visible' })
+
+      gsap.fromTo(
+        imgRef.current,
+        { opacity: 0, scale: 0.95 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 2,
+          delay: 0.3,
+          ease: 'power4.out',
+          scrollTrigger: {
+            trigger: imgRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse'
+          }
+        }
+      )
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section id="sobreMim">
+      <div className="container sobreMimdiv" ref={sectionRef}>
+        <h1 className="TitleSobre">{t('aboutTitle')}</h1>
+
         <div className="sobreMimItens">
-            <div className="itensSobre">
-            
-            <p className='txtSobre'>
-                Sou estudante de <span id="enfase2">Sistemas de Informação</span>.
-                </p>
-            <p className='txtSobre'>
-                Meu foco de estudo é Frontend, porém também estudo Backend.
-                </p>
-            <p className='txtSobre'>
-                Estou disposto a ter diferentes experiências de trabalho em estágio.
-                </p>
-        </div>
-        <div className="divfoto">
-        <img className='minhaFoto' src={eu} alt="" />
+          <div className="itensSobre">
+            <p className="txtSobre">
+              <Trans i18nKey="left1">
+                Sou desenvolvedor <span id="enfase2">full stack</span>.
+              </Trans>
+            </p>
+            <p className="txtSobre">{t('left2')}</p>
+            <p className="txtSobre">{t('left3')}</p>
+          </div>
 
-        </div><div className="itensSobre">
-            
-            <p className='txtSobre'>
-                Minha previsão de formação é Julho de 2026.
-                </p>
-            <p className='txtSobre'>
-                Tenho 23 anos.
-                </p>
-            <p className='txtSobre'>
-                Possuo <span id="enfase2">inglês avançado</span>.
-                </p>
+          <div className="divfoto" ref={fotoWrapperRef}>
+            <img
+              className="minhaFoto"
+              ref={imgRef}
+              src={eu}
+              alt={t('aboutTitle')}
+            />
+          </div>
+
+          <div className="itensSobre">
+            <p className="txtSobre">{t('right1')}</p>
+            <p className="txtSobre">{t('right2')}</p>
+            <p className="txtSobre">
+              <Trans i18nKey="right3">
+                Possuo <span id="enfase2">inglês avançado</span> e experiência com conversação.
+              </Trans>
+            </p>
+          </div>
         </div>
-        </div>
-        </div>
-        </section>
-        </>
-    )
+      </div>
+    </section>
+  )
 }
