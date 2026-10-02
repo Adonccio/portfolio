@@ -6,7 +6,7 @@ A trajetória na EDS inclui estágio de agosto de 2024 a junho de 2026 e atuaç�
 
 ## Executar localmente
 
-Requer Node.js 20 ou superior e npm.
+Requer Node.js 24.x e npm. O arquivo `.nvmrc` permite selecionar essa versão com `nvm use`.
 
 ```sh
 npm ci
@@ -55,6 +55,8 @@ npm run optimize:images
 Sharp é uma ferramenta de desenvolvimento para compressão de imagens. Playwright e axe são ferramentas de validação; não são incluídos no bundle do site.
 
 ## SEO e publicação
+
+Na Vercel, utilize Node.js 24.x em **Settings → Build and Deployment → Node.js Version**. O campo `engines.node` do `package.json` também define essa versão para os novos deployments. Use o preset Vite, o comando `npm run build` e o diretório de saída `dist`.
 
 Defina `VITE_SITE_URL` no ambiente de publicação com a URL pública do portfólio. O build gera links canônicos e URLs absolutas para Open Graph e Twitter. O arquivo `.env.example` documenta essa opção sem assumir um domínio.
 
