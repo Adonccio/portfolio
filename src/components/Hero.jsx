@@ -2,11 +2,14 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReveal } from '../hooks/useReveal'
 import portraitArt from '../assets/hero-portrait.webp'
+import portraitArtDark from '../assets/hero-portrait-dark.webp'
+import { useThemeValue } from '../hooks/useTheme'
 import DataFlow from './DataFlow'
 import Icon from './ui/Icon'
 
 export default function Hero() {
   const { t } = useTranslation()
+  const theme = useThemeValue()
   const ref = useRef(null)
   useReveal(ref, '', true)
   return (
@@ -34,7 +37,7 @@ export default function Hero() {
             <div className="orb orb-two" aria-hidden="true" />
             <figure className="hero-art" data-reveal>
               <div className="hero-art-motion" data-float>
-                <img src={portraitArt} alt={t('hero.portraitArt')} width="960" height="1152"
+                <img src={theme === 'dark' ? portraitArtDark : portraitArt} alt={t('hero.portraitArt')} width="960" height="1152"
                   loading="eager" decoding="async" />
               </div>
             </figure>

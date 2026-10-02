@@ -1,5 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useSyncExternalStore } from 'react'
 import { savePreference } from '../utils/storage'
+
+function subscribeTheme(onChange) {
+  const observer = new MutationObserver(onChange)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
+  return () => observer.disconnect()
+}
+
+export function useThemeValue() {
+  return useSyncExternalStore(subscribeTheme, () => document.documentElement.dataset.theme || 'dark')
+}
 
 export function useTheme() {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || 'dark')

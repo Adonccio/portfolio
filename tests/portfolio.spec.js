@@ -42,12 +42,20 @@ test('professional profile, language, metadata and preferences are consistent', 
 
 test('theme changes persist without losing the current language', async ({ page }) => {
   await page.goto('/')
+  const portrait = page.locator('.hero-art img')
+  const lightPortrait = await portrait.getAttribute('src')
   await page.getByRole('button', { name: 'Usar tema escuro' }).click()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+  await expect(portrait).not.toHaveAttribute('src', lightPortrait)
+  await portrait.evaluate(image => image.decode())
+  const darkPortrait = await portrait.getAttribute('src')
   await page.reload()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+  await expect(portrait).toHaveAttribute('src', darkPortrait)
   await page.getByRole('button', { name: 'Usar tema claro' }).click()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'light')
+  await expect(portrait).toHaveAttribute('src', lightPortrait)
+  await portrait.evaluate(image => image.decode())
   await expect(page.locator('h1')).toContainText('Engenheiro de Dados.')
 })
 
