@@ -1,67 +1,222 @@
 {
-    "aboutTitle": "UM POUCO SOBRE MIM",
-    "left1": "Sou desenvolvedor <1>full stack</1>.",
-    "left2": "Tenho conhecimentos em engenharia de dados.",
-    "left3": "Estou disposto a ter diferentes experiências de trabalho em estágio.",
-    "right1": "Minha previsão de formação é Julho de 2026.",
-    "right2": "Tenho 24 anos.",
-    "right3": "Possuo <1>inglês avançado</1> e experiência com conversação.",
-    "project": {
-        "access": "Acessar",
-        "repository": "Repositório"
+  "metadata": {
+    "title": "Gustavo Adoncio | Engenharia de Dados e Desenvolvimento de Software",
+    "description": "Portfólio de Gustavo Adoncio, Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Engenharia de dados, desenvolvimento de sistemas e projetos pessoais.",
+    "backToTop": "Voltar ao topo"
+  },
+  "nav": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Competências",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "label": "Navegação principal",
+    "menu": "Abrir menu",
+    "close": "Fechar menu",
+    "language": "Mudar para inglês",
+    "themeLight": "Usar tema claro",
+    "themeDark": "Usar tema escuro",
+    "skip": "Pular para o conteúdo"
+  },
+  "hero": {
+    "eyebrow": "ENGENHARIA DE DADOS + SOFTWARE",
+    "intro": "Olá, sou Gustavo Adoncio.",
+    "titleFirst": "Engenheiro de Dados.",
+    "titleSecond": "Desenvolvedor de Software.",
+    "description": "Na EDS, atuo em engenharia de dados e desenvolvimento de sistemas corporativos, desde os bancos de dados e serviços back-end até as interfaces e a implantação das aplicações.",
+    "projects": "Explorar projetos",
+    "experience": "Minha experiência",
+    "contact": "Vamos conversar",
+    "scroll": "Role para explorar",
+    "degree": "Graduado em Sistemas de Informação",
+    "occupation": "Engenheiro de Dados I",
+    "company": "EDS · desde junho de 2026"
+  },
+  "flow": {
+    "label": "Atuação em desenvolvimento de sistemas",
+    "title": "Do banco de dados à implantação",
+    "hint": "Selecionar etapa de desenvolvimento",
+    "stages": {
+      "database": {
+        "label": "Banco de dados",
+        "title": "Modelagem e processamento de dados",
+        "description": "Modelagem, pipelines ETL/ELT e otimização de consultas SQL e procedimentos PL/SQL em bancos relacionais."
       },
-    "infos": {
-    "hello": "Olá, me chamo",
-    "name": "Gustavo Adoncio",
-    "welcome": "Seja bem-vindo ao meu portfólio!",
-    "description1": "Sou desenvolvedor de software e engenheiro de dados com ênfase em <1>Vue, React, Java e Airflow</1>. Sou estagiário na Extreme Digital Solutions desde 2024",
-    "description2": "Participo de todas as etapas do desenvolvimento de aplicações, desde o levantamento de requisitos, ao desenvolvimento do banco de dados, front-end e back-end até documentos entregáveis.",
-    "description3": "Estudar inglês é um dos meus hobbies!",
-    "button": "Venha me conhecer!"
-    },
-    "techs": {
-        "title": "Tecnologias em Foco",
-        "description": "No meu dia a dia de trabalho, atuo em todas as etapas do desenvolvimento de aplicações — desde o levantamento de requisitos até a implantação. Tenho experiência na criação de bancos de dados estruturados com SQL, além da extração e modelagem de dados. No desenvolvimento, utilizo Vue.js no front-end e Java no back-end. Abaixo, você pode conferir algumas das tecnologias com as quais já trabalhei:",
-        "buttonShow": "Mostrar Todas Tecnologias",
-        "buttonHide": "Esconder Tecnologias"
+      "backend": {
+        "label": "Back-end",
+        "title": "Serviços e integração de sistemas",
+        "description": "Desenvolvimento de serviços Java com Quarkus e Hibernate Reactive, integrando APIs e bancos de dados."
       },
-      "projects": {
-        "title": "Projetos Principais",
-        "apple": {
-          "name": "Apple Shop",
-          "description": "Loja virtual da Apple, com navegação em SPA feita com NextJS."
-        },
-        "amazon": {
-          "name": "Amazon Prime Video App",
-          "description": "Clone da interface do aplicativo do Amazon Prime Video."
-        },
-        "spa": {
-            "name": "Loja SPA",
-          "description": "Projeto de loja para prática de SPA com React."
-        },
-        "kritic": {
-            "name": "App de Sinopse de Filmes",
-          "description": "Aplicativo de busca de filmes utilizando React Native e API do TMDB."
-        },
-        "stock": {
-            "name": "Estoque com React",
-          "description": "Projeto de estoque de loja utilizando React."
-        }
+      "frontend": {
+        "label": "Front-end",
+        "title": "Aplicações e interfaces web",
+        "description": "Desenvolvimento e manutenção de interfaces com Vue.js, React e JavaScript, integradas aos serviços da aplicação."
       },
-    "redes": {
-        "title": "Redes Sociais",
-        "linkedin": "LinkedIn",
-        "github": "Github",
-        "instagram": "Instagram",
-        "whatsapp": "WhatsApp",
-        "email": "gustavoadoncio@gmail.com",
-        "contact": "Fale diretamente comigo no Whatsapp"
-    },
-    "navbar": {
-        "about": "Sobre Mim",
-        "techs": "Tecnologias",
-        "projects": "Projetos",
-        "languageToggle": "EN"
+      "deployment": {
+        "label": "Implantação",
+        "title": "Implantação e manutenção de aplicações",
+        "description": "Participação na implantação e manutenção de aplicações corporativas, com utilização de Docker e versionamento com Git."
       }
+    }
+  },
+  "about": {
+    "eyebrow": "01 / SOBRE MIM",
+    "title": "Sobre mim",
+    "paragraphs": [
+      "Sou Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Tenho experiência em engenharia de dados, desenvolvimento de software e integração de sistemas corporativos.",
+      "Desenvolvo pipelines ETL/ELT, modelo e transformo dados e otimizo bancos relacionais. Também trabalho com serviços back-end, interfaces web e implantação de aplicações."
+    ],
+    "educationLabel": "FORMAÇÃO",
+    "education": "Sistemas de Informação",
+    "educationDetail": "Graduação concluída",
+    "languageLabel": "IDIOMA",
+    "language": "Inglês avançado",
+    "languageDetail": "Experiência com conversação",
+    "portrait": "Retrato de Gustavo Adoncio"
+  },
+  "experience": {
+    "title": "Experiência profissional",
+    "role": "Engenheiro de Dados I",
+    "company": "EDS (Extreme Digital Solutions)",
+    "summary": "Atuação em engenharia de dados e desenvolvimento de sistemas corporativos, com responsabilidades em bancos de dados, serviços back-end, interfaces web e implantação de aplicações.",
+    "areas": [
+      {
+        "title": "Pipelines e transformação de dados",
+        "description": "Desenvolvimento e manutenção de pipelines ETL/ELT, processamento de grandes volumes de dados e organização de arquiteturas de dados em camadas Bronze, Silver e Gold."
+      },
+      {
+        "title": "Integração e qualidade de dados",
+        "description": "Construção de integrações entre diferentes sistemas, com mecanismos de carga incremental, validação e deduplicação de registros."
+      },
+      {
+        "title": "Bancos de dados e desempenho",
+        "description": "Desenvolvimento e otimização de consultas SQL e procedimentos PL/SQL, com utilização de materialized views para otimização e disponibilização de dados em bancos Oracle e PostgreSQL."
+      },
+      {
+        "title": "Orquestração e rastreabilidade",
+        "description": "Orquestração de pipelines com Apache Airflow, monitoramento de execuções, tratamento de erros e implementação de mecanismos de rastreabilidade."
+      },
+      {
+        "title": "Desenvolvimento de software",
+        "description": "Desenvolvimento e manutenção de aplicações web com Vue.js, JavaScript e frameworks de interface, além de serviços back-end com Java, Quarkus e Hibernate Reactive. Integração entre aplicações, APIs e bancos de dados relacionais, com utilização de Docker."
+      }
+    ],
+    "eyebrow": "02 / EXPERIÊNCIA",
+    "stackLabel": "Tecnologias utilizadas",
+    "historyLabel": "Trajetória profissional na EDS",
+    "current": "Cargo atual",
+    "positions": [
+      {
+        "role": "Engenheiro de Dados I",
+        "period": "Junho de 2026 — atual"
+      },
+      {
+        "role": "Estagiário",
+        "period": "Agosto de 2024 — junho de 2026"
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "03 / COMPETÊNCIAS",
+    "title": "Competências técnicas",
+    "description": "Tecnologias utilizadas em engenharia de dados, desenvolvimento de aplicações e integração de sistemas corporativos.",
+    "all": "Todas as áreas",
+    "filterLabel": "Filtrar áreas de competência",
+    "groups": {
+      "data": {
+        "title": "Engenharia de Dados",
+        "description": "Pipelines, modelagem e transformação. Da ingestão à disponibilização dos dados."
+      },
+      "front": {
+        "title": "Front-end",
+        "description": "Interfaces responsivas, componentes reutilizáveis e integração com APIs."
+      },
+      "back": {
+        "title": "Back-end",
+        "description": "Serviços corporativos e integração entre aplicações e bancos de dados relacionais."
+      },
+      "database": {
+        "title": "Bancos de Dados",
+        "description": "Modelagem relacional, consultas otimizadas e acesso eficiente aos dados."
+      },
+      "tools": {
+        "title": "Ferramentas & DevOps",
+        "description": "Versionamento, contêineres e ferramentas para desenvolver e entregar software."
+      }
+    },
+    "concepts": "Conhecimentos complementares",
+    "conceptList": [
+      "Arquitetura de software",
+      "Integração de sistemas corporativos",
+      "Desenvolvimento full stack",
+      "Fundamentos de IA e machine learning"
+    ],
+    "show": "Mostrar todas as tecnologias",
+    "hide": "Mostrar menos tecnologias"
+  },
+  "projects": {
+    "eyebrow": "04 / PROJETOS SELECIONADOS",
+    "title": "Projetos pessoais",
+    "description": "Projetos de desenvolvimento web, mobile e análise de dados.",
+    "filterLabel": "Filtrar projetos",
+    "all": "Todos",
+    "web": "Web",
+    "mobile": "Mobile",
+    "data": "Dados",
+    "access": "Demonstração",
+    "repository": "Repositório",
+    "gallery": "Outra visão do dashboard",
+    "preview": "Ver imagem do projeto",
+    "count": "{{count}} projetos",
+    "items": {
+      "apple": {
+        "name": "Apple Shop",
+        "description": "Loja inspirada na Apple para explorar navegação SPA e catálogo de produtos com Next.js."
+      },
+      "amazon": {
+        "name": "Amazon Prime Video App",
+        "description": "Recriação da interface mobile do Prime Video para praticar layouts de aplicativos com React Native."
+      },
+      "spa": {
+        "name": "Loja SPA",
+        "description": "Loja pessoal para praticar navegação em página única e interfaces de carrinho de compras com React."
+      },
+      "kritic": {
+        "name": "Kritic · Busca de filmes",
+        "description": "Aplicativo de busca, sinopses e detalhes de filmes, integrando a API do TMDB com React Native."
+      },
+      "stock": {
+        "name": "Estoque com React",
+        "description": "Aplicação de estoque para praticar organização de itens e apresentação de dados com React."
+      },
+      "sales": {
+        "name": "Dashboard de vendas globais",
+        "description": "Projeto pessoal em Power BI para explorar vendas por país, categoria e segmento em dashboards interativos."
+      },
+      "stocks": {
+        "name": "Dashboard de análise de ações",
+        "description": "Projeto pessoal em Power BI para visualizar variações e volumes de ações da Microsoft e da Apple."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "05 / CONTATO",
+    "title": "Contato profissional",
+    "description": "Entre em contato para conversar sobre projetos ou oportunidades em engenharia de dados e desenvolvimento de software.",
+    "email": "Enviar e-mail",
+    "copy": "Copiar e-mail",
+    "copied": "E-mail copiado",
+    "copyError": "Não foi possível copiar. Use o link de e-mail.",
+    "socialLabel": "Links profissionais e redes sociais",
+    "whatsapp": "Conversar no WhatsApp",
+    "qr": "QR code do WhatsApp",
+    "footer": "Engenharia de dados & desenvolvimento de software.",
+    "top": "Voltar ao topo"
+  },
+  "common": {
+    "loading": "Carregando projetos…",
+    "error": "Não foi possível carregar esta seção.",
+    "retry": "Recarregar página",
+    "close": "Fechar prévia"
   }
-  
+}

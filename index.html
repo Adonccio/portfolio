@@ -1,11 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="public/logo.ico" />
-    <meta property="og:image" content="https://drive.google.com/uc?id=1aMPMM9FdPizLE9BHeHMXc-0MRL4TP5N6    "/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gustavo Adoncio</title>
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0c0f14" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <meta name="description" content="Portfólio de Gustavo Adoncio, Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Engenharia de dados, desenvolvimento de sistemas e projetos pessoais." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gustavo Adoncio | Engenharia de Dados e Desenvolvimento de Software" />
+    <meta property="og:description" content="Portfólio de Gustavo Adoncio, Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Engenharia de dados, desenvolvimento de sistemas e projetos pessoais." />
+    <meta property="og:image" content="/social-card.png" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gustavo Adoncio | Engenharia de Dados e Desenvolvimento de Software" />
+    <meta name="twitter:description" content="Portfólio de Gustavo Adoncio, Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Engenharia de dados, desenvolvimento de sistemas e projetos pessoais." />
+    <meta name="twitter:image" content="/social-card.png" />
+    <title>Gustavo Adoncio | Engenharia de Dados e Desenvolvimento de Software</title>
+    <script>
+      try {
+        var savedTheme = localStorage.getItem('portfolio-theme');
+        var initialTheme = savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.dataset.theme = initialTheme;
+        document.documentElement.style.colorScheme = initialTheme;
+      } catch (error) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

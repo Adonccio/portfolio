@@ -1,66 +1,222 @@
 {
-    "aboutTitle": "A LITTLE ABOUT ME",
-    "left1": "I'm a <1>full stack</1> developer.",
-    "left2": "I have knowledge in data engineering.",
-    "left3": "I'm open to various internship experiences.",
-    "right1": "My expected graduation is July 2026.",
-    "right2": "I'm 24 years old.",
-    "right3": "I have <1>advanced english</1> and conversation experience.",
-    "project": {
-        "access": "Access",
-        "repository": "Repository"
+  "metadata": {
+    "title": "Gustavo Adoncio | Data Engineering and Software Development",
+    "description": "Portfolio of Gustavo Adoncio, Data Engineer I at EDS with a degree in Information Systems. Data engineering, systems development and personal projects.",
+    "backToTop": "Back to top"
+  },
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "label": "Main navigation",
+    "menu": "Open menu",
+    "close": "Close menu",
+    "language": "Switch to Portuguese",
+    "themeLight": "Use light theme",
+    "themeDark": "Use dark theme",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "DATA ENGINEERING + SOFTWARE",
+    "intro": "Hello, I'm Gustavo Adoncio.",
+    "titleFirst": "Data Engineer.",
+    "titleSecond": "Software Developer.",
+    "description": "At EDS, I work in data engineering and enterprise software development, from databases and back-end services to interfaces and application deployment.",
+    "projects": "Explore projects",
+    "experience": "My experience",
+    "contact": "Let's talk",
+    "scroll": "Scroll to explore",
+    "degree": "Degree in Information Systems",
+    "occupation": "Data Engineer I",
+    "company": "EDS · since June 2026"
+  },
+  "flow": {
+    "label": "Systems development experience",
+    "title": "From database to deployment",
+    "hint": "Select a development stage",
+    "stages": {
+      "database": {
+        "label": "Database",
+        "title": "Data modeling and processing",
+        "description": "Data modeling, ETL/ELT pipelines and optimization of SQL queries and PL/SQL procedures in relational databases."
       },
-    "infos": {
-    "hello": "Hello, my name is",
-    "welcome": "Welcome to my portfolio!",
-    "description1": "I'm a software developer and data engineer focused on <1>Vue, React, Java and Airflow</1>. Intern at Extreme Digital Solutions since 2024.",
-    "description2": "I work in all stages of software development, from requirements gathering, database, front-end, back-end to deliverables documents.",
-    "description3": "One of my hobbies is studying English!",
-    "button": "Get to know me!"
-    },
-    "techs": {
-        "title": "Focused Technologies",
-        "description": "In my day-to-day work, i participate in all stages of application development — from gathering requirements to deployment. I have experience creating structured databases using SQL, as well as extracting and modeling data. In development, i use Vue.js on the front end and Java on the back end. Below, you can see some of the technologies i've worked with:",
-        "buttonShow": "Show All Technologies",
-        "buttonHide": "Hide Technologies"
+      "backend": {
+        "label": "Back-end",
+        "title": "Services and systems integration",
+        "description": "Development of Java services with Quarkus and Hibernate Reactive, integrating APIs and databases."
       },
-    "projects": {
-        "title": "Main Projects",
-        "apple": {
-            "name": "Apple Shop",
-            "description": "Virtual Apple store with SPA navigation built using NextJS."
-        },
-        "amazon": {
-            "name": "Amazon Prime Video App",
-            "description": "Clone of the Amazon Prime Video app interface."
-        },
-        "spa": {
-            "name": "SPA Store",
-            "description": "Store project for practicing SPA using React."
-        },
-        "kritic": {
-            "name": "Movie Synopsis App",
-            "description": "Movie search app using React Native and the TMDB API."
-        },
-        "stock": {
-            "name": "React Inventory",
-            "description": "Store inventory project built with React."
-        }
-    },
-    "redes": {
-        "title": "Social Media",
-        "linkedin": "LinkedIn",
-        "github": "Github",
-        "instagram": "Instagram",
-        "whatsapp": "WhatsApp",
-        "email": "gustavoadoncio@gmail.com",
-        "contact": "Contact me directly on WhatsApp"
-    },
-    "navbar": {
-        "about": "About Me",
-        "techs": "Technologies",
-        "projects": "Projects",
-        "languageToggle": "PT"
+      "frontend": {
+        "label": "Front-end",
+        "title": "Web applications and interfaces",
+        "description": "Development and maintenance of interfaces with Vue.js, React and JavaScript, integrated with application services."
+      },
+      "deployment": {
+        "label": "Deployment",
+        "title": "Application deployment and maintenance",
+        "description": "Participation in enterprise application deployment and maintenance, using Docker and Git version control."
       }
+    }
+  },
+  "about": {
+    "eyebrow": "01 / ABOUT",
+    "title": "About me",
+    "paragraphs": [
+      "I'm a Data Engineer I at EDS with a degree in Information Systems. I have experience in data engineering, software development and enterprise systems integration.",
+      "I develop ETL/ELT pipelines, model and transform data, and optimize relational databases. I also work on back-end services, web interfaces and application deployment."
+    ],
+    "educationLabel": "EDUCATION",
+    "education": "Information Systems",
+    "educationDetail": "Completed degree",
+    "languageLabel": "LANGUAGE",
+    "language": "Advanced English",
+    "languageDetail": "Conversation experience",
+    "portrait": "Portrait of Gustavo Adoncio"
+  },
+  "experience": {
+    "title": "Professional experience",
+    "role": "Data Engineer I",
+    "company": "EDS (Extreme Digital Solutions)",
+    "summary": "Data engineering and enterprise software development, with responsibilities in databases, back-end services, web interfaces and application deployment.",
+    "areas": [
+      {
+        "title": "Pipelines and data transformation",
+        "description": "Development and maintenance of ETL/ELT pipelines, processing of large data volumes, and organization of data architectures into Bronze, Silver and Gold layers."
+      },
+      {
+        "title": "Integration and data quality",
+        "description": "Integration of data from different systems, with incremental loading, validation and record deduplication."
+      },
+      {
+        "title": "Databases and performance",
+        "description": "Development and optimization of SQL queries and PL/SQL procedures, using materialized views to optimize and provide access to data in Oracle and PostgreSQL databases."
+      },
+      {
+        "title": "Orchestration and traceability",
+        "description": "Pipeline orchestration with Apache Airflow, execution monitoring, error handling and implementation of traceability mechanisms."
+      },
+      {
+        "title": "Software development",
+        "description": "Development and maintenance of web applications with Vue.js, JavaScript and UI frameworks, alongside back-end services with Java, Quarkus and Hibernate Reactive. Integration of applications, APIs and relational databases, with use of Docker."
+      }
+    ],
+    "eyebrow": "02 / EXPERIENCE",
+    "stackLabel": "Technologies used",
+    "historyLabel": "Career progression at EDS",
+    "current": "Current role",
+    "positions": [
+      {
+        "role": "Data Engineer I",
+        "period": "June 2026 — present"
+      },
+      {
+        "role": "Intern",
+        "period": "August 2024 — June 2026"
+      }
+    ]
+  },
+  "skills": {
+    "eyebrow": "03 / SKILLS",
+    "title": "Technical skills",
+    "description": "Technologies used in data engineering, application development and enterprise systems integration.",
+    "all": "All areas",
+    "filterLabel": "Filter skill areas",
+    "groups": {
+      "data": {
+        "title": "Data Engineering",
+        "description": "Pipelines, modeling and transformation. From ingestion to data delivery."
+      },
+      "front": {
+        "title": "Front-end",
+        "description": "Responsive interfaces, reusable components and API integration."
+      },
+      "back": {
+        "title": "Back-end",
+        "description": "Enterprise services and integration of applications and relational databases."
+      },
+      "database": {
+        "title": "Databases",
+        "description": "Relational modeling, optimized queries and efficient access to data."
+      },
+      "tools": {
+        "title": "Tools & DevOps",
+        "description": "Version control, containers and tools for software delivery."
+      }
+    },
+    "concepts": "Additional knowledge",
+    "conceptList": [
+      "Software architecture",
+      "Enterprise systems integration",
+      "Full stack development",
+      "AI and machine learning fundamentals"
+    ],
+    "show": "Show all technologies",
+    "hide": "Show fewer technologies"
+  },
+  "projects": {
+    "eyebrow": "04 / SELECTED PROJECTS",
+    "title": "Personal projects",
+    "description": "Web, mobile and data analysis projects.",
+    "filterLabel": "Filter projects",
+    "all": "All projects",
+    "web": "Web",
+    "mobile": "Mobile",
+    "data": "Data",
+    "access": "Live demo",
+    "repository": "Source code",
+    "gallery": "Another view of the dashboard",
+    "preview": "View project image",
+    "count": "{{count}} projects",
+    "items": {
+      "apple": {
+        "name": "Apple Shop",
+        "description": "An Apple-inspired store built to explore SPA navigation and a product catalog with Next.js."
+      },
+      "amazon": {
+        "name": "Amazon Prime Video App",
+        "description": "A mobile recreation of the Prime Video interface, practicing app layouts with React Native."
+      },
+      "spa": {
+        "name": "SPA Store",
+        "description": "A personal store project for practicing single-page navigation and shopping cart interfaces with React."
+      },
+      "kritic": {
+        "name": "Kritic · Movie search",
+        "description": "A movie search app with synopses and details, integrating the TMDB API with React Native."
+      },
+      "stock": {
+        "name": "React Inventory",
+        "description": "An inventory application built to practice item organization and data presentation with React."
+      },
+      "sales": {
+        "name": "Global sales dashboard",
+        "description": "A personal Power BI project exploring sales by country, category and segment through interactive dashboards."
+      },
+      "stocks": {
+        "name": "Stock analysis dashboard",
+        "description": "A personal Power BI project visualizing stock price variations and volumes for Microsoft and Apple."
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "05 / CONTACT",
+    "title": "Professional contact",
+    "description": "Get in touch to discuss projects or opportunities in data engineering and software development.",
+    "email": "Send an email",
+    "copy": "Copy email",
+    "copied": "Email copied",
+    "copyError": "Unable to copy. Use the email link.",
+    "socialLabel": "Professional and social links",
+    "whatsapp": "Talk on WhatsApp",
+    "qr": "WhatsApp QR code",
+    "footer": "Data engineering & software development.",
+    "top": "Back to top"
+  },
+  "common": {
+    "loading": "Loading projects…",
+    "error": "This section could not be loaded.",
+    "retry": "Reload page",
+    "close": "Close preview"
   }
-  
+}

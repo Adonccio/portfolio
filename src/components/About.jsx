@@ -1,87 +1,35 @@
-import eu from '../assets/foto_perfil.jpg'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLayoutEffect, useRef } from 'react'
-import { useTranslation, Trans } from 'react-i18next'
-
+import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
+import portrait from '../assets/foto_perfil.webp'
+import { useReveal } from '../hooks/useReveal'
+import SectionHeading from './ui/SectionHeading'
+import Icon from './ui/Icon'
 
 export default function About() {
   const { t } = useTranslation()
-  const sectionRef = useRef(null)
-  const imgRef = useRef(null)
-  const fotoWrapperRef = useRef(null)
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-    const ctx = gsap.context(() => {
-      gsap.from(sectionRef.current, {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse'
-        }
-      })
-
-      gsap.set(fotoWrapperRef.current, { visibility: 'visible' })
-
-      gsap.fromTo(
-        imgRef.current,
-        { opacity: 0, scale: 0.95 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 2,
-          delay: 0.3,
-          ease: 'power4.out',
-          scrollTrigger: {
-            trigger: imgRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none reverse'
-          }
-        }
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
-
+  const ref = useRef(null)
+  useReveal(ref)
   return (
-    <section id="sobreMim">
-      <div className="container sobreMimdiv" ref={sectionRef}>
-        <h1 className="TitleSobre">{t('aboutTitle')}</h1>
-
-        <div className="sobreMimItens">
-          <div className="itensSobre">
-            <p className="txtSobre">
-              <Trans i18nKey="left1">
-                Sou desenvolvedor <span id="enfase2">full stack</span>.
-              </Trans>
-            </p>
-            <p className="txtSobre">{t('left2')}</p>
-            <p className="txtSobre">{t('left3')}</p>
+    <section id="sobreMim" className="section about-section" ref={ref} aria-labelledby="about-title">
+      <div className="container about-grid">
+        <div className="portrait-column" data-reveal>
+          <div className="portrait-motion" data-parallax>
+            <div className="portrait-frame" data-float>
+              <img src={portrait} alt={t('about.portrait')} width="560" height="700" loading="lazy" decoding="async" />
+              <div className="portrait-label"><span>GUSTAVO ADONCIO</span><Icon name="arrow" /></div>
+            </div>
           </div>
-
-          <div className="divfoto" ref={fotoWrapperRef}>
-            <img
-              className="minhaFoto"
-              ref={imgRef}
-              src={eu}
-              alt={t('aboutTitle')}
-            />
+        </div>
+        <div className="about-copy">
+          <SectionHeading eyebrow={t('about.eyebrow')} title={t('about.title')} id="about-title" />
+          <div className="about-paragraphs" data-reveal>
+            {t('about.paragraphs', { returnObjects: true }).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
-
-          <div className="itensSobre">
-            <p className="txtSobre">{t('right1')}</p>
-            <p className="txtSobre">{t('right2')}</p>
-            <p className="txtSobre">
-              <Trans i18nKey="right3">
-                Possuo <span id="enfase2">inglês avançado</span> e experiência com conversação.
-              </Trans>
-            </p>
+          <div className="about-facts" data-reveal>
+            <div><Icon name="book" /><p className="eyebrow">{t('about.educationLabel')}</p>
+              <h4>{t('about.education')}</h4><p>{t('about.educationDetail')}</p></div>
+            <div><Icon name="globe" /><p className="eyebrow">{t('about.languageLabel')}</p>
+              <h4>{t('about.language')}</h4><p>{t('about.languageDetail')}</p></div>
           </div>
         </div>
       </div>

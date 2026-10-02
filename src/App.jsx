@@ -1,66 +1,43 @@
-import { useLayoutEffect, useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarTop from './components/Navbar';
-import Infos from './components/Infos';
-import '../src/App.css'
-import Projetos from './components/Techs';
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import SplitType from 'split-type'
-import About from './components/About';
-import Techs from './components/Techs';
-import { Button } from 'reactstrap';
-import PrincipaisTechs from './components/PrincipaisTechs';
-import PrincipaisProjetos from './components/PrincipaisProjetos';
-import Redes from './components/Redes';
-import arrow from '../src/assets/arrow.png'
-import PowerBI from './components/PowerBI';
+import { lazy, Suspense } from 'react'
+import { useTranslation } from 'react-i18next'
+import SiteHeader from './components/SiteHeader'
+import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Contact from './components/Contact'
+import ErrorBoundary from './components/ui/ErrorBoundary'
+import { useMetadata } from './hooks/useMetadata'
+import { useSectionNavigation } from './hooks/useSectionNavigation'
 import './i18n'
+import './App.css'
 
+const Projects = lazy(() => import('./components/Projects'))
 
-
-function App() {
-
-
-
-
+export default function App() {
+  const { t } = useTranslation()
+  useMetadata()
+  useSectionNavigation()
   return (
     <>
-    <button id='botaoVoltar' onClick={() => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    }}>
-      <img id='arrow' src={arrow} alt="" />
-    </button>
-    <section id="infos">
-      
-      <NavbarTop/>
-        <section className='container'>
-      <Infos/>
+      <a className="skip-link" href="#main">{t('nav.skip')}</a>
+      <SiteHeader />
+      <main id="main">
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <section id="sectionProjetos" className="section projects-section" aria-label={t('projects.title')}>
+          <div className="container">
+            <ErrorBoundary message={t('common.error')} retry={t('common.retry')}>
+              <Suspense fallback={<div className="section-fallback" role="status">{t('common.loading')}</div>}>
+                <Projects />
+              </Suspense>
+            </ErrorBoundary>
+          </div>
         </section>
-    </section>
-    <section>
-      <About/>
-      {window.addEventListener( 'scroll', function() {
-        var botao = document.querySelector('#botaoVoltar')
-        botao.classList.toggle('active', window.scrollY > 600)
-      })}
-    </section>
-    <section>
-        <PrincipaisTechs/>
-    
-    </section>
-    {/* <section>
-      <PowerBI/>
-    </section> */}
-    <section>
-      <PrincipaisProjetos/>
-    </section>
-      <Redes/>
+        <Contact />
+      </main>
     </>
   )
 }
-
-export default App
