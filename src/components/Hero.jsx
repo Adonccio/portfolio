@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReveal } from '../hooks/useReveal'
+import portraitArt from '../assets/hero-portrait.webp'
 import DataFlow from './DataFlow'
 import Icon from './ui/Icon'
 
@@ -31,8 +32,16 @@ export default function Hero() {
           <div className="hero-visual">
             <div className="orb orb-one" aria-hidden="true" />
             <div className="orb orb-two" aria-hidden="true" />
-            <DataFlow />
+            <figure className="hero-art" data-reveal>
+              <div className="hero-art-motion" data-float>
+                <img src={portraitArt} alt={t('hero.portraitArt')} width="960" height="1152"
+                  loading="eager" decoding="async" />
+              </div>
+            </figure>
           </div>
+        </div>
+        <div className="hero-capabilities">
+          <DataFlow />
         </div>
         <div className="hero-bottom" data-reveal>
           <a href="#sobreMim"><Icon name="down" />{t('hero.scroll')}</a>
