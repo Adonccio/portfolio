@@ -18,7 +18,7 @@ export const navigation = [
 export const skillGroups = [
   { id: 'data', icon: 'layers', technologies: ['ETL / ELT', 'Apache Airflow', 'Python', 'Data Warehouse', 'Bronze / Silver / Gold', 'Modelagem de dados'] },
   { id: 'front', icon: 'code', technologies: ['React', 'JavaScript', 'Vue.js 2', 'Vuex', 'Vuetify', 'TypeScript', 'React Native', 'Next.js', 'HTML5', 'CSS3', 'Bootstrap', 'Reactstrap', 'Pug', 'Vite', 'GSAP', 'ScrollTrigger', 'i18next', 'REST APIs'] },
-  { id: 'back', icon: 'terminal', technologies: ['Java', 'Quarkus', 'Hibernate Reactive', 'Panache', 'REST APIs'] },
+  { id: 'back', icon: 'terminal', technologies: ['Java', 'Spring Boot', 'Quarkus', 'Hibernate Reactive', 'Panache', 'REST APIs'] },
   { id: 'database', icon: 'database', technologies: ['SQL', 'PL/SQL', 'Oracle Database', 'PostgreSQL', 'Materialized Views', 'Power BI'] },
   { id: 'tools', icon: 'tools', technologies: ['Git', 'Docker', 'Jenkins', 'Excel'] }
 ]

@@ -20,17 +20,11 @@ export default function Hero() {
             <p className="eyebrow" data-reveal><span className="small-line" />{t('hero.eyebrow')}</p>
             <p className="hero-intro" data-reveal>{t('hero.intro')}</p>
             <h1 id="hero-title" data-reveal>{t('hero.titleFirst')}<span>{t('hero.titleSecond')}</span></h1>
-            <a className="hero-occupation" href="#experiencia" data-reveal>
-              <span className="status-dot" aria-hidden="true" />
-              <span><strong>{t('hero.occupation')}</strong><span>{t('hero.company')}</span></span>
-              <Icon name="arrow" />
-            </a>
             <p className="hero-description" data-reveal>{t('hero.description')}</p>
             <div className="hero-actions" data-reveal>
               <a className="button button-primary" href="#sectionProjetos">{t('hero.projects')}<Icon name="arrow" /></a>
               <a className="button button-secondary" href="#experiencia">{t('hero.experience')}<Icon name="right" /></a>
             </div>
-            <a className="hero-contact text-link" href="#contato" data-reveal>{t('hero.contact')}<Icon name="arrow" /></a>
           </div>
           <div className="hero-visual">
             <div className="orb orb-one" aria-hidden="true" />
@@ -45,10 +39,6 @@ export default function Hero() {
         </div>
         <div className="hero-capabilities">
           <DataFlow />
-        </div>
-        <div className="hero-bottom" data-reveal>
-          <a href="#sobreMim"><Icon name="down" />{t('hero.scroll')}</a>
-          <span>{t('hero.degree')}</span>
         </div>
       </div>
     </section>

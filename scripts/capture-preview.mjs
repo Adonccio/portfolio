@@ -42,7 +42,7 @@ try {
     .orb{position:absolute;right:-70px;top:-150px;width:500px;height:500px;border:1px solid #302742;border-radius:50%;z-index:-1}.orb:after{content:'';position:absolute;inset:50px;border:inherit;border-radius:inherit}
     .foot{position:absolute;bottom:50px;left:80px;right:80px;border-top:1px solid #2a323d;padding-top:20px;display:flex;justify-content:space-between;font:12px Consolas,monospace;color:#858f9e;letter-spacing:1px}
     </style></head><body><div class="orb"></div><div class="brand">${brandMark}</div><div class="line"></div><div class="name">Gustavo Adoncio</div>
-    <h1>Engenheiro de Dados.<span>Desenvolvedor de Software.</span></h1><p>Engenheiro de Dados I na EDS desde junho de 2026.</p>
+    <h1>Engenheiro de Dados.<span>Desenvolvedor de Software.</span></h1><p>Engenheiro de Dados desde junho de 2026.</p>
     <div class="foot"><span>EDS · EXTREME DIGITAL SOLUTIONS</span><span>SISTEMAS DE INFORMAÇÃO</span></div></body></html>`)
   await card.screenshot({ path: root + '/public/social-card.png' })
   console.log('Generated public/social-card.png')

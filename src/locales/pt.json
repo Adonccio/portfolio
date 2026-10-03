@@ -23,19 +23,14 @@
     "intro": "Olá, sou Gustavo Adoncio.",
     "titleFirst": "Engenheiro de Dados.",
     "titleSecond": "Desenvolvedor de Software.",
-    "description": "Na EDS, atuo em engenharia de dados e desenvolvimento de sistemas corporativos, desde os bancos de dados e serviços back-end até as interfaces e a implantação das aplicações.",
+    "description": "Atuo em engenharia de dados e desenvolvimento de sistemas corporativos, desde os bancos de dados e serviços back-end até as interfaces e a implantação das aplicações.",
     "projects": "Explorar projetos",
     "experience": "Minha experiência",
-    "contact": "Vamos conversar",
-    "scroll": "Role para explorar",
-    "degree": "Graduado em Sistemas de Informação",
-    "occupation": "Engenheiro de Dados I",
-    "company": "EDS · desde junho de 2026",
     "portraitArt": "Retrato artístico de Gustavo Adoncio com expressão neutra, metade fotográfica e metade em formas gráficas violeta e verde-lima"
   },
   "flow": {
     "label": "Atuação em desenvolvimento de sistemas",
-    "title": "Do banco de dados à implantação",
+    "title": "Do banco de dados à interface",
     "hint": "Selecionar etapa de desenvolvimento",
     "stages": {
       "database": {
@@ -112,7 +107,7 @@
         "period": "Junho de 2026 — atual"
       },
       {
-        "role": "Estagiário",
+        "role": "Estagiário de Dados e Desenvolvimento",
         "period": "Agosto de 2024 — junho de 2026"
       }
     ]

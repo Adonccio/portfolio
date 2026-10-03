@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Gustavo Adoncio | Data Engineering and Software Development",
-    "description": "Portfolio of Gustavo Adoncio, Data Engineer I at EDS with a degree in Information Systems. Data engineering, systems development and personal projects.",
+    "description": "Portfolio of Gustavo Adoncio, Data Engineer I with a degree in Information Systems. Data engineering, systems development and personal projects.",
     "backToTop": "Back to top"
   },
   "nav": {
@@ -23,19 +23,14 @@
     "intro": "Hello, I'm Gustavo Adoncio.",
     "titleFirst": "Data Engineer.",
     "titleSecond": "Software Developer.",
-    "description": "At EDS, I work in data engineering and enterprise software development, from databases and back-end services to interfaces and application deployment.",
+    "description": "I work in data engineering and enterprise software development, from databases and back-end services to interfaces and application deployment.",
     "projects": "Explore projects",
     "experience": "My experience",
-    "contact": "Let's talk",
-    "scroll": "Scroll to explore",
-    "degree": "Degree in Information Systems",
-    "occupation": "Data Engineer I",
-    "company": "EDS · since June 2026",
     "portraitArt": "Artistic portrait of Gustavo Adoncio with a neutral expression, half photographic and half violet and lime graphic shapes"
   },
   "flow": {
     "label": "Systems development experience",
-    "title": "From database to deployment",
+    "title": "From database to user interface",
     "hint": "Select a development stage",
     "stages": {
       "database": {
@@ -112,7 +107,7 @@
         "period": "June 2026 — present"
       },
       {
-        "role": "Intern",
+        "role": "Data and Development Intern",
         "period": "August 2024 — June 2026"
       }
     ]

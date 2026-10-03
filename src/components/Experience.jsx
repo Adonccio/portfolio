@@ -16,7 +16,6 @@ export default function Experience() {
         <SectionHeading eyebrow={t('experience.eyebrow')} title={t('experience.title')} />
         <div className="experience-layout">
           <div className="experience-summary" data-reveal>
-            <span className="company-monogram" aria-hidden="true">eds<span>_</span></span>
             <h3>{t('experience.role')}</h3>
             <p className="company-name">{t('experience.company')}</p>
             <div className="career-history" aria-label={t('experience.historyLabel')}>
