@@ -41,7 +41,7 @@ test('professional profile, language, metadata and preferences are consistent', 
 
 test('theme changes persist without losing the current language', async ({ page }) => {
   await page.goto('/')
-  const portrait = page.locator('.hero-art img')
+  const portrait = page.locator('.hero-art-base')
   const lightPortrait = await portrait.getAttribute('src')
   await page.getByRole('button', { name: 'Usar tema escuro' }).click()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
@@ -56,6 +56,64 @@ test('theme changes persist without losing the current language', async ({ page 
   await expect(portrait).toHaveAttribute('src', lightPortrait)
   await portrait.evaluate(image => image.decode())
   await expect(page.locator('h1')).toContainText('Engenheiro de Dados.')
+})
+
+test('portrait reveal follows the mouse on the artistic half and resets on exit', async ({ page }) => {
+  await page.goto('/')
+  const portrait = page.locator('.hero-portrait')
+  await expect(portrait).toHaveAttribute('data-photo-ready', 'true')
+  await portrait.scrollIntoViewIfNeeded()
+  const bounds = await portrait.boundingBox()
+  await page.mouse.move(bounds.x + bounds.width * 0.35, bounds.y + bounds.height * 0.4)
+  await expect(portrait).toHaveAttribute('data-revealing', 'true')
+  await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '1')
+  const firstPosition = await portrait.evaluate(element => element.style.getPropertyValue('--reveal-y'))
+  await page.mouse.move(bounds.x + bounds.width * 0.3, bounds.y + bounds.height * 0.6)
+  await expect.poll(() => portrait.evaluate(element => element.style.getPropertyValue('--reveal-y')))
+    .not.toBe(firstPosition)
+  await page.mouse.move(bounds.x + bounds.width * 0.75, bounds.y + bounds.height * 0.4)
+  await expect(portrait).not.toHaveAttribute('data-revealing')
+  await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')
+  await page.mouse.move(bounds.x + bounds.width * 0.35, bounds.y + bounds.height * 0.4)
+  await expect(portrait).toHaveAttribute('data-revealing', 'true')
+  await page.mouse.move(0, 0)
+  await expect(portrait).not.toHaveAttribute('data-revealing')
+  await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')
+})
+
+test('clicking the portrait keeps the reveal local in both themes', async ({ page }) => {
+  await page.goto('/')
+  const portrait = page.locator('.hero-portrait')
+  await expect(portrait).toHaveAttribute('data-photo-ready', 'true')
+  for (const theme of ['light', 'dark']) {
+    if (theme === 'dark') await page.getByRole('button', { name: 'Usar tema escuro' }).click()
+    const bounds = await portrait.boundingBox()
+    await portrait.click({ position: { x: bounds.width * 0.3, y: bounds.height * 0.4 } })
+    await expect(portrait.locator('.hero-art-base')).toHaveCSS('opacity', '1')
+    await expect(portrait.locator('.hero-art-reveal')).not.toHaveCSS('mask-image', 'none')
+    await expect(portrait).not.toHaveAttribute('aria-pressed')
+    await page.mouse.move(0, 0)
+    await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')
+  }
+})
+
+test('touch leaves the artistic portrait intact and does not reveal the full photo', async ({ browser, baseURL }) => {
+  const context = await browser.newContext({ baseURL, viewport: { width: 390, height: 844 }, hasTouch: true, reducedMotion: 'reduce' })
+  try {
+    const page = await context.newPage()
+    await page.goto('/')
+    const portrait = page.locator('.hero-portrait')
+    await expect(portrait).toHaveAttribute('data-photo-ready', 'true')
+    await portrait.scrollIntoViewIfNeeded()
+    await portrait.dispatchEvent('pointermove', { pointerType: 'touch', clientX: 120, clientY: 300 })
+    await expect(portrait).not.toHaveAttribute('data-revealing')
+    await portrait.tap()
+    await expect(portrait.locator('.hero-art-base')).toHaveCSS('opacity', '1')
+    await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')
+    await expect(portrait).not.toHaveAttribute('aria-pressed')
+  } finally {
+    await context.close()
+  }
 })
 
 test('development stages, skills and projects respond to independent filters', async ({ page }) => {
@@ -150,6 +208,44 @@ for (const theme of ['light', 'dark']) {
 
 test.describe('normal motion', () => {
   test.use({ reducedMotion: 'no-preference' })
+  test('portrait leaves a fading elliptical trail and clears it when motion is reduced', async ({ page }) => {
+    await page.goto('/')
+    const portrait = page.locator('.hero-portrait')
+    await expect(portrait).toHaveAttribute('data-photo-ready', 'true')
+    await portrait.scrollIntoViewIfNeeded()
+    const restingArtMask = await portrait.locator('.hero-art-base').evaluate(element => getComputedStyle(element).maskImage)
+    const bounds = await portrait.boundingBox()
+    await page.mouse.move(bounds.x + bounds.width * 0.3, bounds.y + bounds.height * 0.35)
+    await expect(portrait).toHaveAttribute('data-revealing', 'true')
+    await page.mouse.move(bounds.x + bounds.width * 0.42, bounds.y + bounds.height * 0.47, { steps: 8 })
+    await expect.poll(() => portrait.evaluate(element =>
+      (element.style.getPropertyValue('--reveal-mask').match(/radial-gradient/g) || []).length
+    )).toBeGreaterThan(1)
+    const radii = await portrait.evaluate(element => ({
+      x: parseFloat(element.style.getPropertyValue('--reveal-radius-x')),
+      y: parseFloat(element.style.getPropertyValue('--reveal-radius-y'))
+    }))
+    expect(radii.x).toBeGreaterThan(45)
+    expect(radii.x).toBeLessThanOrEqual(50)
+    expect(radii.y).toBeGreaterThan(radii.x * 1.4)
+    await expect(portrait.locator('.hero-art-base')).toHaveCSS('mask-image', restingArtMask)
+    await page.mouse.move(0, 0)
+    await expect(portrait).toHaveAttribute('data-revealing', 'true')
+    await page.waitForTimeout(800)
+    await expect(portrait).toHaveAttribute('data-revealing', 'true')
+    await expect(portrait).not.toHaveAttribute('data-revealing', { timeout: 2200 })
+    await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')
+
+    await page.mouse.move(bounds.x + bounds.width * 0.3, bounds.y + bounds.height * 0.35)
+    await expect(portrait).toHaveAttribute('data-revealing', 'true')
+    await page.emulateMedia({ reducedMotion: 'reduce' })
+    await expect(portrait).not.toHaveAttribute('data-revealing')
+    await page.mouse.move(bounds.x + bounds.width * 0.38, bounds.y + bounds.height * 0.45)
+    await expect(portrait).toHaveAttribute('data-revealing', 'true')
+    await page.mouse.move(0, 0)
+    await expect(portrait).not.toHaveAttribute('data-revealing')
+  })
+
   test('animations settle and stay usable after rapid language changes', async ({ page }) => {
     const errors = []
     page.on('pageerror', (error) => errors.push(error.message))

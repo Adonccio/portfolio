@@ -6,6 +6,7 @@ import portraitArtDark from '../assets/hero-portrait-dark.webp'
 import { useThemeValue } from '../hooks/useTheme'
 import DataFlow from './DataFlow'
 import Icon from './ui/Icon'
+import PortraitReveal from './PortraitReveal'
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -31,8 +32,7 @@ export default function Hero() {
             <div className="orb orb-two" aria-hidden="true" />
             <figure className="hero-art" data-reveal>
               <div className="hero-art-motion" data-float>
-                <img src={theme === 'dark' ? portraitArtDark : portraitArt} alt={t('hero.portraitArt')} width="960" height="1152"
-                  loading="eager" decoding="async" />
+                <PortraitReveal artSrc={theme === 'dark' ? portraitArtDark : portraitArt} alt={t('hero.portraitArt')} />
               </div>
             </figure>
           </div>
