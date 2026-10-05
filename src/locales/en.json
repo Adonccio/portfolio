@@ -30,7 +30,7 @@
   },
   "flow": {
     "label": "Systems development experience",
-    "title": "From database to user interface",
+    "title": "From Database To User Interface",
     "hint": "Select a development stage",
     "stages": {
       "database": {
@@ -57,9 +57,9 @@
   },
   "about": {
     "eyebrow": "01 / ABOUT",
-    "title": "About me",
+    "title": "About Me",
     "paragraphs": [
-      "I'm a Data Engineer I at EDS with a degree in Information Systems. I have experience in data engineering, software development and enterprise systems integration.",
+      "I'm a Data Engineer I with a degree in Information Systems. I have experience in data engineering, software development and enterprise systems integration.",
       "I develop ETL/ELT pipelines, model and transform data, and optimize relational databases. I also work on back-end services, web interfaces and application deployment."
     ],
     "educationLabel": "EDUCATION",
@@ -71,7 +71,7 @@
     "portrait": "Portrait of Gustavo Adoncio"
   },
   "experience": {
-    "title": "Professional experience",
+    "title": "Professional Experience",
     "role": "Data Engineer I",
     "company": "EDS (Extreme Digital Solutions)",
     "summary": "Data engineering and enterprise software development, with responsibilities in databases, back-end services, web interfaces and application deployment.",
@@ -114,7 +114,7 @@
   },
   "skills": {
     "eyebrow": "03 / SKILLS",
-    "title": "Technical skills",
+    "title": "Technical Skills",
     "description": "Technologies used in data engineering, application development and enterprise systems integration.",
     "all": "All areas",
     "filterLabel": "Filter skill areas",
@@ -152,7 +152,7 @@
   },
   "projects": {
     "eyebrow": "04 / SELECTED PROJECTS",
-    "title": "Personal projects",
+    "title": "Personal Projects",
     "description": "Web, mobile and data analysis projects.",
     "filterLabel": "Filter projects",
     "all": "All projects",
@@ -197,7 +197,7 @@
   },
   "contact": {
     "eyebrow": "05 / CONTACT",
-    "title": "Professional contact",
+    "title": "Professional Contact",
     "description": "Get in touch to discuss projects or opportunities in data engineering and software development.",
     "email": "Send an email",
     "copy": "Copy email",

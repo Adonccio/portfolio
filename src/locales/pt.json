@@ -30,7 +30,7 @@
   },
   "flow": {
     "label": "Atuação em desenvolvimento de sistemas",
-    "title": "Do banco de dados à interface",
+    "title": "Do Banco De Dados À Interface",
     "hint": "Selecionar etapa de desenvolvimento",
     "stages": {
       "database": {
@@ -57,9 +57,9 @@
   },
   "about": {
     "eyebrow": "01 / SOBRE MIM",
-    "title": "Sobre mim",
+    "title": "Sobre Mim",
     "paragraphs": [
-      "Sou Engenheiro de Dados I na EDS e graduado em Sistemas de Informação. Tenho experiência em engenharia de dados, desenvolvimento de software e integração de sistemas corporativos.",
+      "Sou Engenheiro de Dados I e graduado em Sistemas de Informação. Tenho experiência em engenharia de dados, desenvolvimento de software e integração de sistemas corporativos.",
       "Desenvolvo pipelines ETL/ELT, modelo e transformo dados e otimizo bancos relacionais. Também trabalho com serviços back-end, interfaces web e implantação de aplicações."
     ],
     "educationLabel": "FORMAÇÃO",
@@ -71,7 +71,7 @@
     "portrait": "Retrato de Gustavo Adoncio"
   },
   "experience": {
-    "title": "Experiência profissional",
+    "title": "Experiência Profissional",
     "role": "Engenheiro de Dados I",
     "company": "EDS (Extreme Digital Solutions)",
     "summary": "Atuação em engenharia de dados e desenvolvimento de sistemas corporativos, com responsabilidades em bancos de dados, serviços back-end, interfaces web e implantação de aplicações.",
@@ -114,7 +114,7 @@
   },
   "skills": {
     "eyebrow": "03 / COMPETÊNCIAS",
-    "title": "Competências técnicas",
+    "title": "Competências Técnicas",
     "description": "Tecnologias utilizadas em engenharia de dados, desenvolvimento de aplicações e integração de sistemas corporativos.",
     "all": "Todas as áreas",
     "filterLabel": "Filtrar áreas de competência",
@@ -152,7 +152,7 @@
   },
   "projects": {
     "eyebrow": "04 / PROJETOS SELECIONADOS",
-    "title": "Projetos pessoais",
+    "title": "Projetos Pessoais",
     "description": "Projetos de desenvolvimento web, mobile e análise de dados.",
     "filterLabel": "Filtrar projetos",
     "all": "Todos",
@@ -197,7 +197,7 @@
   },
   "contact": {
     "eyebrow": "05 / CONTATO",
-    "title": "Contato profissional",
+    "title": "Contato Profissional",
     "description": "Entre em contato para conversar sobre projetos ou oportunidades em engenharia de dados e desenvolvimento de software.",
     "email": "Enviar e-mail",
     "copy": "Copiar e-mail",
