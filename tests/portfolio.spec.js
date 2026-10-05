@@ -231,7 +231,7 @@ test.describe('normal motion', () => {
     await expect(portrait.locator('.hero-art-base')).toHaveCSS('mask-image', restingArtMask)
     await page.mouse.move(0, 0)
     await expect(portrait).toHaveAttribute('data-revealing', 'true')
-    await page.waitForTimeout(800)
+    await page.waitForTimeout(1800)
     await expect(portrait).toHaveAttribute('data-revealing', 'true')
     await expect(portrait).not.toHaveAttribute('data-revealing', { timeout: 2200 })
     await expect(portrait.locator('.hero-art-reveal')).toHaveCSS('opacity', '0')

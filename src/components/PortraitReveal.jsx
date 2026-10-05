@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import portraitPhoto from '../assets/hero-portrait-photo.webp'
 import { useMediaQuery } from '../hooks/useMediaQuery'
 
-const trailDuration = 1400
-const trailHold = 250
+const trailDuration = 2800
+const trailHold = 600
 const maxTrailPoints = 16
 
 export default function PortraitReveal({ artSrc, alt }) {
